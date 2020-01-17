@@ -70,13 +70,14 @@ module API
     JSON.parse json_result.body
   end
 
-  def print_json json
+  def print_json json, depth
     json.each do |key, value|
       if value.class == Hash
         puts "#{key}:"
-        print_json value
+        print_json value, depth+1
       else 
-        puts "#{key.gsub(/\d+\. /, '')}: #{value}"
+#        puts "#{key.gsub(/\d+\. /, '')}: #{value}"
+        puts "#{"\t"*depth}#{key}: #{value}"
       end
     end
   end
@@ -90,6 +91,6 @@ module API
     else 
       raise NameError, 'Invalid function: #{function}'
     end
-    print_json(get_json(call))
+    print_json(get_json(call), 0)
   end
 end
