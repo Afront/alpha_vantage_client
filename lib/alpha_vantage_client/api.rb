@@ -43,7 +43,7 @@ module API
             "FX_WEEKLY"=> {:required => [function, from_symbol, to_symbol], :optional => [datatype]},
             "FX_MONTHLY"=> {:required => [function, from_symbol, to_symbol], :optional => [datatype]}
       }
-      parameters = @stock_market_parameters + @forex_parameters
+      parameters = @stock_market_parameters.merge(@forex_parameters)
 
       required_parameters = parameters[function][:required]
       optional_parameters = parameters[function][:optional]
