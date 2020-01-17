@@ -70,7 +70,7 @@ module API
     JSON.parse json_result.body
   end
 
-  def print_json json, depth
+  def print_json json, depth=0
     json.each do |key, value|
       if value.class == Hash
         puts "#{key}:"
@@ -91,6 +91,6 @@ module API
     else 
       raise NameError, 'Invalid function: #{function}'
     end
-    print_json(get_json(call), 0)
+    print_json get_json(call)
   end
 end
