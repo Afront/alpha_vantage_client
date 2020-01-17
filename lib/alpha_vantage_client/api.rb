@@ -54,7 +54,6 @@ module API
         arr_err << "#{parameter} is not set" if !value && (required_parameters.include? value) #need to fix name choices soon
         arr_err << "#{parameter} should not be set for #{function}" unless (required_parameters+optional_parameters).include?(value) || !value
         arr_valid << "#{parameter}=#{value}" if value
-        break unless arr_err.empty?
       end
 
       raise ArgumentError, arr_err.join('\n') unless arr_err.empty? #fix newline
