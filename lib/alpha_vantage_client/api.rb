@@ -71,6 +71,14 @@ module API
   end
 
   def print_json json
+    json.each do |key, value|
+      if value.class == Hash
+        puts "#{key}:"
+        print_json value
+      else 
+        puts "#{key.gsub(/\d+\. /, '')}: #{value}"
+      end
+    end
   end
 
   def test(function:, from_currency: false, to_currency: false, from_symbol: false, to_symbol: false, symbol: false, interval: false, outputsize: false, datatype: false, keywords: false)
