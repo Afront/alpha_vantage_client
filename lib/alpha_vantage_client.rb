@@ -1,6 +1,7 @@
 require "alpha_vantage_client/version"
+require 'alpha_vantage_client/api.rb'
 
 module AlphaVantageClient
   class Error < StandardError; end
-  # Your code goes here...
+  include API
 end
