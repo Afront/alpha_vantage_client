@@ -22,7 +22,7 @@ module API
         "FX_MONTHLY"=> :forex_function,     
   }
 
-  CallStruct = Struct.new(:function, :from_currency, :to_currency, :from_symbol, :to_symbol, :symbol, :interval, :outputsize, :datatype, :keywords) do
+  CallStruct = Struct.new(:function, :from_currency, :to_currency, :from_symbol, :to_symbol, :symbol, :interval, :outputsize, :datatype, :keywords, keyword_init: true) do
     def get_url #previously validate_data, get_valid_arr, generate_url
       @stock_market_parameters = {
         "TIME_SERIES_INTRADAY"=> {:required => [function, symbol, interval], :optional => [outputsize, datatype]}, 
@@ -84,9 +84,9 @@ module API
   def test(function:, from_currency: false, to_currency: false, from_symbol: false, to_symbol: false, symbol: false, interval: false, outputsize: false, datatype: false, keywords: false)
     call = case @function_type[function]
     when :stock_market_function
-      CallStruct.new(function, symbol, interval, outputsize, datatype, keywords)
+      CallStruct.new(function: function, symbol: symbol, interval: interval, outputsize:outputsize, datatype: datatype, keywords: keywords)
     when :forex_function      
-      CallStruct.new(function, from_currency, to_currency, from_symbol, to_symbol, interval, outputsize, datatype)
+      CallStruct.new(function: function, from_currency: from_currency, to_currency: to_currency, from_symbol: from_symbol, to_symbol: to_symbol, interval: interval, outputsize: outputsize, datatype: datatype)
     else 
       raise NameError, 'Invalid function: #{function}'
     end
