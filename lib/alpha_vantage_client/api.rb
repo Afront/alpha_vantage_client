@@ -81,7 +81,19 @@ module API
     end
   end
 
-  def test(function:, from_currency: false, to_currency: false, from_symbol: false, to_symbol: false, symbol: false, interval: false, outputsize: false, datatype: false, keywords: false)
+  def get_directly(function:, from_currency: false, to_currency: false, from_symbol: false, to_symbol: false, symbol: false, interval: false, outputsize: false, datatype: false, keywords: false)
+    call = case @function_type[function]
+    when :stock_market_function
+      CallStruct.new(function: function, symbol: symbol, interval: interval, outputsize:outputsize, datatype: datatype, keywords: keywords)
+    when :forex_function      
+      CallStruct.new(function: function, from_currency: from_currency, to_currency: to_currency, from_symbol: from_symbol, to_symbol: to_symbol, interval: interval, outputsize: outputsize, datatype: datatype)
+    else 
+      raise NameError, 'Invalid function: #{function}'
+    end
+    get_json call
+  end
+
+  def print_directly(function:, from_currency: false, to_currency: false, from_symbol: false, to_symbol: false, symbol: false, interval: false, outputsize: false, datatype: false, keywords: false)
     call = case @function_type[function]
     when :stock_market_function
       CallStruct.new(function: function, symbol: symbol, interval: interval, outputsize:outputsize, datatype: datatype, keywords: keywords)
