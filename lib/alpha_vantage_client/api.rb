@@ -56,7 +56,7 @@ module API
         arr_valid << "#{parameter}=#{value}" if value
       end
 
-      raise ArgumentError, arr_err.join('\n') unless arr_err.empty? #fix newline
+      raise ArgumentError, ' ' + arr_err.join("\n\t\t") + "\n" unless arr_err.empty? #fix newline
 
       'https://www.alphavantage.co/query?' + arr_valid.join('&') + '&apikey=' + API_KEY
     end
