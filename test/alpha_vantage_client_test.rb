@@ -7,6 +7,8 @@ class AlphaVantageClientTest < Minitest::Test
   end
 
   def test_for_printing_json
-    API::test(function: "CURRENCY_EXCHANGE_RATE", from_currency: "USD", to_currency: "TWD")
+    API::test(function: "CURRENCY_EXCHANGE_RATE", from_currency: "USD", to_currency: "BTC")
+    API::test(function: "FX_INTRADAY", from_symbol: "USD", to_symbol: "TWD", interval: "5min")
+    API::test(function: "FX_DAILY", from_symbol: "USD", to_symbol: "ZWL", outputsize: "full")
   end
 end
