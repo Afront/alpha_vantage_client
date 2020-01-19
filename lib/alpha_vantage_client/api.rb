@@ -1,5 +1,5 @@
-require 'Faraday'
-require 'JSON'
+require 'faraday'
+require 'json'
 
 module API
   raise IOError, 'ALPHA_VANTAGE_API_KEY is not set as an environmental variable' if ENV['ALPHA_VANTAGE_API_KEY'].nil?
