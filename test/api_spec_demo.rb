@@ -2,7 +2,6 @@ describe API do
   describe 'when forex functions are used' do
     describe 'when "CURRENCY_EXCHANGE_RATE" function is used' do
       before do 
-        ENV['ALPHA_VANTAGE_API_KEY'] = 'demo'
         @supposed_hash_object = ::API::get_directly(function: "CURRENCY_EXCHANGE_RATE", from_currency: "USD", to_currency: "JPY")
       end 
 
