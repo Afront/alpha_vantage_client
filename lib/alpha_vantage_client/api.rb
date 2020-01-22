@@ -88,7 +88,7 @@ module API
     when :forex_function      
       CallStruct.new(function: function, from_currency: from_currency, to_currency: to_currency, from_symbol: from_symbol, to_symbol: to_symbol, interval: interval, outputsize: outputsize, datatype: datatype)
     else 
-      raise NameError, 'Invalid function: #{function}'
+      raise NameError, "Invalid function: #{function}"
     end
     get_json call
   end
@@ -100,7 +100,7 @@ module API
     when :forex_function      
       CallStruct.new(function: function, from_currency: from_currency, to_currency: to_currency, from_symbol: from_symbol, to_symbol: to_symbol, interval: interval, outputsize: outputsize, datatype: datatype)
     else 
-      raise NameError, 'Invalid function: #{function}'
+      raise NameError, "Invalid function: #{function}"
     end
     print_json get_json(call)
   end
