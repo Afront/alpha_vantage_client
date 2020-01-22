@@ -6,8 +6,13 @@ describe AlphaVantageClient do
   end
 end
 
+
+require 'api_spec_demo'
+
+=begin
 if ENV['ALPHA_VANTAGE_API_KEY'] == 'demo'
   require 'api_spec_demo'
 else
   require 'api_spec'  
 end
+=end
