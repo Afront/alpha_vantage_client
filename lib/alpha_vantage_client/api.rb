@@ -15,14 +15,17 @@ module API
         "TIME_SERIES_MONTHLY_ADJUSTED"=> :stock_market_function,
         "QUOTE_ENDPOINT"=> :stock_market_function,
         "SEARCH_ENDPOINT"=> :stock_market_function,
-        "CURRENCY_EXCHANGE_RATE"=> :forex_function,
+        "CURRENCY_EXCHANGE_RATE"=> :forex_function, #also a crypto function, but DRY...will change this when refactoring
         "FX_INTRADAY"=> :forex_function,
         "FX_DAILY"=> :forex_function,
         "FX_WEEKLY"=> :forex_function,
         "FX_MONTHLY"=> :forex_function,     
+        "DIGITAL_CURRENCY_DAILY"=> :crypto_function,
+        "DIGITAL_CURRENCY_WEEKLY"=> :crypto_function,
+        "DIGITAL_CURRENCY_MONTHLY"=> :crypto_function,     
   }
 
-  CallStruct = Struct.new(:function, :from_currency, :to_currency, :from_symbol, :to_symbol, :symbol, :interval, :outputsize, :datatype, :keywords, keyword_init: true) do
+  CallStruct = Struct.new(:function, :from_currency, :to_currency, :from_symbol, :to_symbol, :symbol, :market, :interval, :outputsize, :datatype, :keywords, keyword_init: true) do
     def get_url #previously validate_data, get_valid_arr, generate_url
       @stock_market_parameters = {
         "TIME_SERIES_INTRADAY"=> {:required => [function, symbol, interval], :optional => [outputsize, datatype]}, 
@@ -43,7 +46,15 @@ module API
             "FX_WEEKLY"=> {:required => [function, from_symbol, to_symbol], :optional => [datatype]},
             "FX_MONTHLY"=> {:required => [function, from_symbol, to_symbol], :optional => [datatype]}
       }
-      parameters = @stock_market_parameters.merge(@forex_parameters)
+
+      @crypto_parameters = {
+            "DIGITAL_CURRENCY_INTRADAY"=> {:required => [function, symbol, market, interval], :optional => [datatype]},  
+            "DIGITAL_CURRENCY_DAILY"=> {:required => [function, symbol, market], :optional => [datatype]},
+            "DIGITAL_CURRENCY_WEEKLY"=> {:required => [function, symbol, market], :optional => [datatype]},
+            "DIGITAL_CURRENCY_MONTHLY"=> {:required => [function, symbol, market], :optional => [datatype]}
+      }
+
+      parameters = @stock_market_parameters.merge(@forex_parameters).merge(@crypto_parameters)
 
       required_parameters = parameters[function][:required]
       optional_parameters = parameters[function][:optional]
@@ -81,24 +92,28 @@ module API
     end
   end
 
-  def get_directly(function:, from_currency: false, to_currency: false, from_symbol: false, to_symbol: false, symbol: false, interval: false, outputsize: false, datatype: false, keywords: false)
+  def get_directly(function:, from_currency: false, to_currency: false, from_symbol: false, to_symbol: false, symbol: false, market: false, interval: false, outputsize: false, datatype: false, keywords: false)
     call = case @function_type[function]
     when :stock_market_function
       CallStruct.new(function: function, symbol: symbol, interval: interval, outputsize:outputsize, datatype: datatype, keywords: keywords)
     when :forex_function      
       CallStruct.new(function: function, from_currency: from_currency, to_currency: to_currency, from_symbol: from_symbol, to_symbol: to_symbol, interval: interval, outputsize: outputsize, datatype: datatype)
+    when :crypto_function
+      CallStruct.new(function: function, symbol: symbol, market: market, datatype: datatype)  
     else 
       raise NameError, "Invalid function: #{function}"
     end
     get_json call
   end
 
-  def print_directly(function:, from_currency: false, to_currency: false, from_symbol: false, to_symbol: false, symbol: false, interval: false, outputsize: false, datatype: false, keywords: false)
+  def print_directly(function:, from_currency: false, to_currency: false, from_symbol: false, to_symbol: false, symbol: false, market: false, interval: false, outputsize: false, datatype: false, keywords: false)
     call = case @function_type[function]
     when :stock_market_function
       CallStruct.new(function: function, symbol: symbol, interval: interval, outputsize:outputsize, datatype: datatype, keywords: keywords)
     when :forex_function      
       CallStruct.new(function: function, from_currency: from_currency, to_currency: to_currency, from_symbol: from_symbol, to_symbol: to_symbol, interval: interval, outputsize: outputsize, datatype: datatype)
+    when :crypto_function
+      CallStruct.new(function: function, symbol: symbol, market: market, datatype: datatype)  
     else 
       raise NameError, "Invalid function: #{function}"
     end
