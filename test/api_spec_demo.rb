@@ -30,4 +30,46 @@ describe API do
       end
     end
   end
+
+  describe 'when crypto functions are used' do
+    describe 'when "CURRENCY_EXCHANGE_RATE" function is used' do
+      before do 
+        @supposed_hash_object = ::API::get_directly(function: "CURRENCY_EXCHANGE_RATE", from_currency: "BTC", to_currency: "CNY")
+      end 
+
+      it 'must return a Hash object' do
+        _(@supposed_hash_object).must_be_kind_of Hash
+      end
+    end
+
+    describe 'when the "DIGITAL_CURRENCY_DAILY" function is used' do
+      before do 
+        @supposed_hash_object = ::API::get_directly(function: "DIGITAL_CURRENCY_DAILY", symbol: "BTC", market: "CNY")
+      end
+
+      it 'must return a Hash object' do 
+      _(@supposed_hash_object).must_be_kind_of Hash
+      end
+    end
+
+    describe 'when the "DIGITAL_CURRENCY_WEEKLY" function is used' do
+      before do 
+        @supposed_hash_object = ::API::get_directly(function: "DIGITAL_CURRENCY_WEEKLY", symbol: "BTC", market: "CNY")
+      end
+
+      it 'must return a Hash object' do 
+      _(@supposed_hash_object).must_be_kind_of Hash
+      end
+    end
+
+    describe 'when the "DIGITAL_CURRENCY_MONTHLY" function is used' do
+      before do 
+        @supposed_hash_object = ::API::get_directly(function: "DIGITAL_CURRENCY_MONTHLY", symbol: "BTC", market: "CNY")
+      end
+
+      it 'must return a Hash object' do 
+      _(@supposed_hash_object).must_be_kind_of Hash
+      end
+    end
+  end
 end
