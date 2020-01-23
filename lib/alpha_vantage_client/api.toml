@@ -1,0 +1,230 @@
+[stock_time_series]
+	[stock_time_series.intraday]
+		function_name = "TIME_SERIES_INTRADAY"
+		required_parameters = [
+			"function",
+			"symbol",
+			"interval",
+			"apikey"
+		]
+		optional_parameters = [
+			"outputsize",
+			"datatype"
+		]
+
+[forex]
+[cryptocurrencies]
+[technical_indicators]
+	[technical_indicators.sma]
+		function_name = "SMA"
+		required_parameters = [
+			"function",
+			"symbol",
+			"interval",
+			"time_period",
+			"series_type",
+			"apikey"
+		]
+		optional_parameters = [
+			"datatype"
+		]
+	[technical_indicators.ema]
+		function_name = "EMA"
+		required_parameters = [
+			"function",
+			"symbol",
+			"interval",
+			"time_period",
+			"series_type",
+			"apikey"
+		]
+		optional_parameters = [
+			"datatype"
+		]
+	[technical_indicators.wma]
+		function_name = "WMA"
+		required_parameters = [
+			"function",
+			"symbol",
+			"interval",
+			"time_period",
+			"series_type",
+			"apikey"
+		]
+		optional_parameters = [
+			"datatype"
+		]
+	[technical_indicators.dema]
+		function_name = "DEMA"
+		required_parameters = [
+			"function",
+			"symbol",
+			"interval",
+			"time_period",
+			"series_type",
+			"apikey"
+		]
+		optional_parameters = [
+			"datatype"
+		]
+	[technical_indicators.tema]
+		function_name = "TEMA"
+		required_parameters = [
+			"function",
+			"symbol",
+			"interval",
+			"time_period",
+			"series_type",
+			"apikey"
+		]
+		optional_parameters = [
+			"datatype"
+		]
+	[technical_indicators.trima]
+		function_name = "TRIMA"
+		required_parameters = [
+			"function",
+			"symbol",
+			"interval",
+			"time_period",
+			"series_type",
+			"apikey"
+		]
+		optional_parameters = [
+			"datatype"
+		]
+	[technical_indicators.kama]
+		function_name = "KAMA"
+		required_parameters = [
+			"function",
+			"symbol",
+			"interval",
+			"time_period",
+			"series_type",
+			"apikey"
+		]
+		optional_parameters = [
+			"datatype"
+		]
+	[technical_indicators.mama]
+		function_name = "MAMA"
+		required_parameters = [
+			"function",
+			"symbol",
+			"interval",
+			"time_period",
+			"series_type",
+			"apikey"
+		]
+		optional_parameters = [
+			"datatype"
+		]
+	[technical_indicators.vwap]
+		function_name = "VWAP"
+		required_parameters = [
+			"function",
+			"symbol",
+			"interval",
+			"apikey"
+		]
+		optional_parameters = [
+			"datatype"
+		]
+	[technical_indicators.t3]
+		function_name = "T3"
+		required_parameters = [
+			"function",
+			"symbol",
+			"interval",
+			"time_period",
+			"apikey"
+		]
+		optional_parameters = [
+			"datatype"
+		]
+	[technical_indicators.macd]
+		function_name = "MACD"
+		required_parameters = [
+			"function",
+			"symbol",
+			"interval",
+			"series_type",
+			"apikey"
+		]
+		optional_parameters = [
+			"fastperiod",
+			"slowperiod",
+			"signalperiod",
+			"datatype"
+		]
+	[technical_indicators.macdext]
+		function_name = "MACDEXT"
+		required_parameters = [
+			"function",
+			"symbol",
+			"interval",
+			"series_type",
+			"apikey"
+		]
+		optional_parameters = [
+			"fastperiod",
+			"slowperiod",
+			"signalperiod",
+			"fastmatype",
+			"slowmatype",
+			"signalmatype",
+			"datatype"
+		]
+	[technical_indicators.stoch]
+		function_name = "STOCH"
+		required_parameters = [
+			"function",
+			"symbol",
+			"interval",
+			"apikey"
+		]
+		optional_parameters = [
+			"fastkperiod",
+			"slowkperiod",
+			"slowdperiod",
+			"slowkmatype",
+			"slowdmatype",
+			"datatype"
+		]
+	[technical_indicators.stochf]
+		function_name = "STOCHF"
+		required_parameters = [
+			"function",
+			"symbol",
+			"interval",
+			"apikey"
+		]
+		optional_parameters = [
+			"fastkperiod",
+			"fastdperiod",
+			"fastdmatype",
+			"datatype"
+		]
+	[technical_indicators.rsi]
+		function_name = "RSI"
+		required_parameters = [
+			"function",
+			"symbol",
+			"interval",
+			"time_period",
+			"series_type",
+			"apikey"
+		]
+		optional_parameters = [
+			"datatype"
+		]
+[sector_performances]
+	[sector_performances.sector]
+		function_name = "SECTOR"
+		required_parameters = [
+			"function",
+			"apikey"
+		]
+		optional_parameters = [
+		]
+		
