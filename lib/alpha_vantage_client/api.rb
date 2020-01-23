@@ -22,7 +22,8 @@ module API
         "FX_MONTHLY"=> :forex_function,     
         "DIGITAL_CURRENCY_DAILY"=> :crypto_function,
         "DIGITAL_CURRENCY_WEEKLY"=> :crypto_function,
-        "DIGITAL_CURRENCY_MONTHLY"=> :crypto_function,     
+        "DIGITAL_CURRENCY_MONTHLY"=> :crypto_function,
+        "SECTOR" => :sector_function, 
   }
 
   CallStruct = Struct.new(:function, :from_currency, :to_currency, :from_symbol, :to_symbol, :symbol, :market, :interval, :outputsize, :datatype, :keywords, keyword_init: true) do
@@ -54,7 +55,12 @@ module API
             "DIGITAL_CURRENCY_MONTHLY"=> {:required => [function, symbol, market], :optional => [datatype]}
       }
 
-      parameters = @stock_market_parameters.merge(@forex_parameters).merge(@crypto_parameters)
+      @sector_parameter = {
+            "SECTOR"=> {:required => [function], :optional => []}
+      }
+
+
+      parameters = @stock_market_parameters.merge(@forex_parameters).merge(@crypto_parameters).merge(@sector_parameter)
 
       required_parameters = parameters[function][:required]
       optional_parameters = parameters[function][:optional]
@@ -100,6 +106,8 @@ module API
       CallStruct.new(function: function, from_currency: from_currency, to_currency: to_currency, from_symbol: from_symbol, to_symbol: to_symbol, interval: interval, outputsize: outputsize, datatype: datatype)
     when :crypto_function
       CallStruct.new(function: function, symbol: symbol, market: market, datatype: datatype)  
+    when :sector_function
+      CallStruct.new(function: function)  
     else 
       raise NameError, "Invalid function: #{function}"
     end
@@ -114,6 +122,8 @@ module API
       CallStruct.new(function: function, from_currency: from_currency, to_currency: to_currency, from_symbol: from_symbol, to_symbol: to_symbol, interval: interval, outputsize: outputsize, datatype: datatype)
     when :crypto_function
       CallStruct.new(function: function, symbol: symbol, market: market, datatype: datatype)  
+    when :sector_function
+      CallStruct.new(function: function)  
     else 
       raise NameError, "Invalid function: #{function}"
     end
