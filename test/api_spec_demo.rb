@@ -72,4 +72,15 @@ describe API do
       end
     end
   end
+  describe 'when sector functions are used' do
+    describe 'when "SECTOR" function is used' do
+      before do 
+        @supposed_hash_object = ::API::get_directly(function: "SECTOR")
+      end 
+
+      it 'must return a Hash object' do
+        _(@supposed_hash_object).must_be_kind_of Hash
+      end
+    end
+  end
 end
