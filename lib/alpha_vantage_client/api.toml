@@ -11,7 +11,58 @@
 			"outputsize",
 			"datatype"
 		]
-
+		demo_urls = [
+			"https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=demo",
+			"https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&outputsize=full&apikey=demo",
+			"https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=demo&datatype=csv",
+		]
+	[stock_time_series.daily]
+		function_name = "TIME_SERIES_DAILY"
+		required_parameters = [
+			"function",
+			"symbol",
+			"apikey"
+		]
+		optional_parameters = [
+			"outputsize",
+			"datatype"
+		]
+		demo_urls = [
+			"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=demo",
+			"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&outputsize=full&apikey=demo",
+			"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=demo&datatype=csv"
+		]
+	[stock_time_series.daily_adjusted]
+		function_name = "TIME_SERIES_DAILY_ADJUSTED"
+		required_parameters = [
+			"function",
+			"symbol",
+			"apikey"
+		]
+		optional_parameters = [
+			"outputsize",
+			"datatype"
+		]
+		demo_urls = [
+			"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=MSFT&apikey=demo",
+			"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=MSFT&outputsize=full&apikey=demo",
+			"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=MSFT&apikey=demo&datatype=csv"
+		]
+	[stock_time_series.weekly]
+		function_name = "TIME_SERIES_WEEKLY"
+		required_parameters = [
+			"function",
+			"symbol",
+			"apikey"
+		]
+		optional_parameters = [
+			"datatype"
+		]
+		demo_urls = [
+			"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=MSFT&apikey=demo",
+			"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=MSFT&outputsize=full&apikey=demo",
+			"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=MSFT&apikey=demo&datatype=csv"
+		]
 [forex]
 [cryptocurrencies]
 [technical_indicators]
@@ -227,4 +278,3 @@
 		]
 		optional_parameters = [
 		]
-		
