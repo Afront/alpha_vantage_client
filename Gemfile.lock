@@ -6,16 +6,27 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    citrus (3.0.2)
+    faraday (1.0.0)
+      multipart-post (>= 1.2, < 3)
+    json (2.3.0)
     minitest (5.13.0)
+    multipart-post (2.1.1)
     rake (12.3.2)
+    toml-rb (2.0.1)
+      citrus (~> 3.0, > 3.0)
 
 PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
   alpha_vantage_client!
+  bundler (~> 2.1)
+  faraday (~> 1.0)
+  json (~> 2.3)
   minitest (~> 5.0)
   rake (~> 12.0)
+  toml-rb (~> 2.0, >= 2.0.1)
 
 BUNDLED WITH
    2.1.2
