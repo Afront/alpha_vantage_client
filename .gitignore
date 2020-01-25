@@ -6,3 +6,4 @@
 /pkg/
 /spec/reports/
 /tmp/
+/.api_toml_generator/
