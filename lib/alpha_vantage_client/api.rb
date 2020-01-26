@@ -12,12 +12,10 @@ module API
     @@functions_info 
   end
 
-
-  CallStruct = Struct.new(:function, :from_currency, :to_currency, :from_symbol, :to_symbol, :symbol, :market, :interval, :outputsize, :datatype, :keywords, keyword_init: true) do
+  CallStruct = Struct.new(:function, :symbol, :market, :apikey, :outputsize, :datatype, :from_symbol, :to_symbol, :interval, :from_currency, :to_currency, :fastperiod, :slowperiod, :time_period, :matype, :series_type, :nbdevup, :nbdevdn, :signalperiod, :fastmatype, :slowmatype, :signalmatype, :fastlimit, :slowlimit, :acceleration, :maximum, :fastkperiod, :slowkperiod, :slowdperiod, :slowkmatype, :slowdmatype, :fastdperiod, :fastdmatype, :keywords, :timeperiod1, :timeperiod2, :timeperiod3, keyword_init: true) do
     def get_url #previously validate_data, get_valid_arr, generate_url
       arr_err = []
       arr_valid = []
-
       required_parameters = @@functions_info[function]["required"]
       optional_parameters = @@functions_info[function]["optional"]
 
@@ -53,24 +51,15 @@ module API
     end
   end
 
-  def get_directly(function:, from_currency: false, to_currency: false, from_symbol: false, to_symbol: false, symbol: false, market: false, interval: false, outputsize: false, datatype: false, keywords: false)
+  def get_directly(function:, symbol: false, market: false, apikey: false, outputsize: false, datatype: false, from_symbol: false, to_symbol: false, interval: false, from_currency: false, to_currency: false, fastperiod: false, slowperiod: false, time_period: false, matype: false, series_type: false, nbdevup: false, nbdevdn: false, signalperiod: false, fastmatype: false, slowmatype: false, signalmatype: false, fastlimit: false, slowlimit: false, acceleration: false, maximum: false, fastkperiod: false, slowkperiod: false, slowdperiod: false, slowkmatype: false, slowdmatype: false, fastdperiod: false, fastdmatype: false, keywords: false, timeperiod1: false, timeperiod2: false, timeperiod3: false)
     raise NameError, "Invalid function: #{function}" unless @@functions_info[function] 
-    get_json CallStruct.new(function: function, from_currency: from_currency, to_currency: to_currency, from_symbol: from_symbol, to_symbol: to_symbol, symbol: symbol, market: market, interval: interval, outputsize: outputsize, datatype: datatype, keywords: keywords)
+    apikey = API_KEY unless apikey
+    get_json CallStruct.new(function: function, symbol: symbol, market: market, apikey: apikey, outputsize: outputsize, datatype: datatype, from_symbol: from_symbol, to_symbol: to_symbol, interval: interval, from_currency: from_currency, to_currency: to_currency, fastperiod: fastperiod, slowperiod: slowperiod, time_period: time_period, matype: matype, series_type: series_type, nbdevup: nbdevup, nbdevdn: nbdevdn, signalperiod: signalperiod, fastmatype: fastmatype, slowmatype: slowmatype, signalmatype: signalmatype, fastlimit: fastlimit, slowlimit: slowlimit, acceleration: acceleration, maximum: maximum, fastkperiod: fastkperiod, slowkperiod: slowkperiod, slowdperiod: slowdperiod, slowkmatype: slowkmatype, slowdmatype: slowdmatype, fastdperiod: fastdperiod, fastdmatype: fastdmatype, keywords: keywords, timeperiod1: timeperiod1, timeperiod2: timeperiod2, timeperiod3: timeperiod3)
   end
 
-  def print_directly(function:, from_currency: false, to_currency: false, from_symbol: false, to_symbol: false, symbol: false, market: false, interval: false, outputsize: false, datatype: false, keywords: false)
-    call = case @function_type[function]
-    when :stock_market_function
-      CallStruct.new(function: function, symbol: symbol, interval: interval, outputsize:outputsize, datatype: datatype, keywords: keywords)
-    when :forex_function      
-      CallStruct.new(function: function, from_currency: from_currency, to_currency: to_currency, from_symbol: from_symbol, to_symbol: to_symbol, interval: interval, outputsize: outputsize, datatype: datatype)
-    when :crypto_function
-      CallStruct.new(function: function, symbol: symbol, market: market, datatype: datatype)  
-    when :sector_function
-      CallStruct.new(function: function)  
-    else 
-      raise NameError, "Invalid function: #{function}"
-    end
-    print_json get_json(call)
+  def print_directly(function:, symbol: false, market: false, apikey: false, outputsize: false, datatype: false, from_symbol: false, to_symbol: false, interval: false, from_currency: false, to_currency: false, fastperiod: false, slowperiod: false, time_period: false, matype: false, series_type: false, nbdevup: false, nbdevdn: false, signalperiod: false, fastmatype: false, slowmatype: false, signalmatype: false, fastlimit: false, slowlimit: false, acceleration: false, maximum: false, fastkperiod: false, slowkperiod: false, slowdperiod: false, slowkmatype: false, slowdmatype: false, fastdperiod: false, fastdmatype: false, keywords: false, timeperiod1: false, timeperiod2: false, timeperiod3: false)
+    raise NameError, "Invalid function: #{function}" unless @@functions_info[function] 
+    apikey = API_KEY unless apikey
+    print_json get_json(CallStruct.new(function: function, symbol: symbol, market: market, apikey: apikey, outputsize: outputsize, datatype: datatype, from_symbol: from_symbol, to_symbol: to_symbol, interval: interval, from_currency: from_currency, to_currency: to_currency, fastperiod: fastperiod, slowperiod: slowperiod, time_period: time_period, matype: matype, series_type: series_type, nbdevup: nbdevup, nbdevdn: nbdevdn, signalperiod: signalperiod, fastmatype: fastmatype, slowmatype: slowmatype, signalmatype: signalmatype, fastlimit: fastlimit, slowlimit: slowlimit, acceleration: acceleration, maximum: maximum, fastkperiod: fastkperiod, slowkperiod: slowkperiod, slowdperiod: slowdperiod, slowkmatype: slowkmatype, slowdmatype: slowdmatype, fastdperiod: fastdperiod, fastdmatype: fastdmatype, keywords: keywords, timeperiod1: timeperiod1, timeperiod2: timeperiod2, timeperiod3: timeperiod3))
   end
 end
