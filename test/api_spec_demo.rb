@@ -1,4 +1,18 @@
+require 'pp'
+
 describe API do
+=begin 
+  it must 'check if ' do
+
+  end
+=end
+
+=begin
+  it 'must load api.toml into @functions_info' do
+   # ::API::functions_info
+  end
+=end
+
   describe 'when forex functions are used' do
     describe 'when "CURRENCY_EXCHANGE_RATE" function is used' do
       before do 

@@ -5,13 +5,10 @@ require 'toml-rb'
 module API
   raise IOError, 'ALPHA_VANTAGE_API_KEY is not set as an environmental variable. If you want to load the API key youself, load API_KEY first' if ENV['ALPHA_VANTAGE_API_KEY'].nil?
   API_KEY = ENV['ALPHA_VANTAGE_API_KEY'].to_s
-  #allow api key loading
-
-  require_relative 'lazy'
-  include Lazy
-  extend Lazy::LazyMethods 
+  #TODO: allow api key loading
 
   module_function
+  #TODO: allow implicit loading 
 
   def load type
     begin
