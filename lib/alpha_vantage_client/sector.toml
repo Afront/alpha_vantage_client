@@ -1,0 +1,6 @@
+[SECTOR]
+function = "SECTOR"
+optional = []
+required = ["function", "apikey"]
+type = "Others"
+urls = ["https://www.alphavantage.co/query?function=SECTOR&apikey=demo", "https://www.alphavantage.co/query?function=SECTOR&apikey=demo"]

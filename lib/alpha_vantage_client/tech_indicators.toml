@@ -1,0 +1,330 @@
+[AD]
+function = "AD"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=AD&symbol=MSFT&interval=daily&apikey=demo", "https://www.alphavantage.co/query?function=AD&symbol=MSFT&interval=daily&apikey=demo"]
+[ADOSC]
+function = "ADOSC"
+optional = ["fastperiod", "slowperiod", "datatype"]
+required = ["function", "symbol", "interval", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=ADOSC&symbol=MSFT&interval=daily&fastperiod=5&apikey=demo", "https://www.alphavantage.co/query?function=ADOSC&symbol=MSFT&interval=daily&fastperiod=5&apikey=demo"]
+[ADX]
+function = "ADX"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=ADX&symbol=MSFT&interval=daily&time_period=10&apikey=demo", "https://www.alphavantage.co/query?function=ADX&symbol=MSFT&interval=daily&time_period=10&apikey=demo", "https://www.alphavantage.co/query?function=ADX&symbol=USDEUR&interval=weekly&time_period=10&apikey=demo", "https://www.alphavantage.co/query?function=ADX&symbol=USDEUR&interval=weekly&time_period=10&apikey=demo"]
+[ADXR]
+function = "ADXR"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=ADXR&symbol=MSFT&interval=daily&time_period=10&apikey=demo", "https://www.alphavantage.co/query?function=ADXR&symbol=MSFT&interval=daily&time_period=10&apikey=demo"]
+[APO]
+function = "APO"
+optional = ["fastperiod", "slowperiod", "matype", "datatype"]
+required = ["function", "symbol", "interval", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=APO&symbol=MSFT&interval=daily&series_type=close&fastperiod=10&matype=1&apikey=demo", "https://www.alphavantage.co/query?function=APO&symbol=MSFT&interval=daily&series_type=close&fastperiod=10&matype=1&apikey=demo"]
+[AROON]
+function = "AROON"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=AROON&symbol=MSFT&interval=daily&time_period=14&apikey=demo", "https://www.alphavantage.co/query?function=AROON&symbol=MSFT&interval=daily&time_period=14&apikey=demo", "https://www.alphavantage.co/query?function=AROON&symbol=USDEUR&interval=weekly&time_period=14&apikey=demo", "https://www.alphavantage.co/query?function=AROON&symbol=USDEUR&interval=weekly&time_period=14&apikey=demo"]
+[AROONOSC]
+function = "AROONOSC"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=AROONOSC&symbol=MSFT&interval=daily&time_period=10&apikey=demo", "https://www.alphavantage.co/query?function=AROONOSC&symbol=MSFT&interval=daily&time_period=10&apikey=demo"]
+[ATR]
+function = "ATR"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=ATR&symbol=MSFT&interval=daily&time_period=14&apikey=demo", "https://www.alphavantage.co/query?function=ATR&symbol=MSFT&interval=daily&time_period=14&apikey=demo"]
+[BBANDS]
+function = "BBANDS"
+optional = ["nbdevup", "nbdevdn", "matype", "datatype"]
+required = ["function", "symbol", "interval", "time_period", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=BBANDS&symbol=MSFT&interval=weekly&time_period=5&series_type=close&nbdevup=3&nbdevdn=3&apikey=demo", "https://www.alphavantage.co/query?function=BBANDS&symbol=MSFT&interval=weekly&time_period=5&series_type=close&nbdevup=3&nbdevdn=3&apikey=demo", "https://www.alphavantage.co/query?function=BBANDS&symbol=USDEUR&interval=weekly&time_period=5&series_type=close&nbdevup=3&nbdevdn=3&apikey=demo", "https://www.alphavantage.co/query?function=BBANDS&symbol=USDEUR&interval=weekly&time_period=5&series_type=close&nbdevup=3&nbdevdn=3&apikey=demo"]
+[BOP]
+function = "BOP"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=BOP&symbol=MSFT&interval=daily&apikey=demo", "https://www.alphavantage.co/query?function=BOP&symbol=MSFT&interval=daily&apikey=demo"]
+[CCI]
+function = "CCI"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=CCI&symbol=MSFT&interval=daily&time_period=10&apikey=demo", "https://www.alphavantage.co/query?function=CCI&symbol=MSFT&interval=daily&time_period=10&apikey=demo", "https://www.alphavantage.co/query?function=CCI&symbol=USDEUR&interval=weekly&time_period=10&apikey=demo", "https://www.alphavantage.co/query?function=CCI&symbol=USDEUR&interval=weekly&time_period=10&apikey=demo"]
+[CMO]
+function = "CMO"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=CMO&symbol=MSFT&interval=weekly&time_period=10&series_type=close&apikey=demo", "https://www.alphavantage.co/query?function=CMO&symbol=MSFT&interval=weekly&time_period=10&series_type=close&apikey=demo"]
+[DEMA]
+function = "DEMA"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=DEMA&symbol=MSFT&interval=weekly&time_period=10&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=DEMA&symbol=MSFT&interval=weekly&time_period=10&series_type=open&apikey=demo"]
+[DX]
+function = "DX"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=DX&symbol=MSFT&interval=daily&time_period=10&apikey=demo", "https://www.alphavantage.co/query?function=DX&symbol=MSFT&interval=daily&time_period=10&apikey=demo"]
+[EMA]
+function = "EMA"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=EMA&symbol=MSFT&interval=weekly&time_period=10&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=EMA&symbol=MSFT&interval=weekly&time_period=10&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=EMA&symbol=USDEUR&interval=weekly&time_period=10&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=EMA&symbol=USDEUR&interval=weekly&time_period=10&series_type=open&apikey=demo"]
+[GLOBAL_QUOTE]
+function = "GLOBAL_QUOTE"
+optional = ["datatype"]
+required = ["function", "symbol", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=demo", "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=demo", "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=300135.SZ&apikey=demo", "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=300135.SZ&apikey=demo", "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=demo&datatype=csv", "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=demo&datatype=csv"]
+[HT_DCPERIOD]
+function = "HT_DCPERIOD"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=HT_DCPERIOD&symbol=MSFT&interval=daily&series_type=close&apikey=demo", "https://www.alphavantage.co/query?function=HT_DCPERIOD&symbol=MSFT&interval=daily&series_type=close&apikey=demo"]
+[HT_DCPHASE]
+function = "HT_DCPHASE"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=HT_DCPHASE&symbol=MSFT&interval=daily&series_type=close&apikey=demo", "https://www.alphavantage.co/query?function=HT_DCPHASE&symbol=MSFT&interval=daily&series_type=close&apikey=demo"]
+[HT_PHASOR]
+function = "HT_PHASOR"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=HT_PHASOR&symbol=MSFT&interval=weekly&series_type=close&apikey=demo", "https://www.alphavantage.co/query?function=HT_PHASOR&symbol=MSFT&interval=weekly&series_type=close&apikey=demo"]
+[HT_SINE]
+function = "HT_SINE"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=HT_SINE&symbol=MSFT&interval=daily&series_type=close&apikey=demo", "https://www.alphavantage.co/query?function=HT_SINE&symbol=MSFT&interval=daily&series_type=close&apikey=demo"]
+[HT_TRENDLINE]
+function = "HT_TRENDLINE"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=HT_TRENDLINE&symbol=MSFT&interval=daily&series_type=close&apikey=demo", "https://www.alphavantage.co/query?function=HT_TRENDLINE&symbol=MSFT&interval=daily&series_type=close&apikey=demo"]
+[HT_TRENDMODE]
+function = "HT_TRENDMODE"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=HT_TRENDMODE&symbol=MSFT&interval=weekly&series_type=close&apikey=demo", "https://www.alphavantage.co/query?function=HT_TRENDMODE&symbol=MSFT&interval=weekly&series_type=close&apikey=demo"]
+[KAMA]
+function = "KAMA"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=KAMA&symbol=MSFT&interval=weekly&time_period=10&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=KAMA&symbol=MSFT&interval=weekly&time_period=10&series_type=open&apikey=demo"]
+[MACD]
+function = "MACD"
+optional = ["fastperiod", "slowperiod", "signalperiod", "datatype"]
+required = ["function", "symbol", "interval", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=MACD&symbol=MSFT&interval=daily&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=MACD&symbol=MSFT&interval=daily&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=MACD&symbol=USDEUR&interval=weekly&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=MACD&symbol=USDEUR&interval=weekly&series_type=open&apikey=demo"]
+[MACDEXT]
+function = "MACDEXT"
+optional = ["fastperiod", "slowperiod", "signalperiod", "fastmatype", "slowmatype", "signalmatype", "datatype"]
+required = ["function", "symbol", "interval", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=MACDEXT&symbol=MSFT&interval=daily&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=MACDEXT&symbol=MSFT&interval=daily&series_type=open&apikey=demo"]
+[MAMA]
+function = "MAMA"
+optional = ["fastlimit", "slowlimit", "datatype"]
+required = ["function", "symbol", "interval", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=MAMA&symbol=MSFT&interval=daily&series_type=close&fastlimit=0.02&apikey=demo", "https://www.alphavantage.co/query?function=MAMA&symbol=MSFT&interval=daily&series_type=close&fastlimit=0.02&apikey=demo"]
+[MFI]
+function = "MFI"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=MFI&symbol=MSFT&interval=weekly&time_period=10&apikey=demo", "https://www.alphavantage.co/query?function=MFI&symbol=MSFT&interval=weekly&time_period=10&apikey=demo"]
+[MIDPOINT]
+function = "MIDPOINT"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=MIDPOINT&symbol=MSFT&interval=daily&time_period=10&series_type=close&apikey=demo", "https://www.alphavantage.co/query?function=MIDPOINT&symbol=MSFT&interval=daily&time_period=10&series_type=close&apikey=demo"]
+[MIDPRICE]
+function = "MIDPRICE"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=MIDPRICE&symbol=MSFT&interval=daily&time_period=10&apikey=demo", "https://www.alphavantage.co/query?function=MIDPRICE&symbol=MSFT&interval=daily&time_period=10&apikey=demo"]
+[MINUS_DI]
+function = "MINUS_DI"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=MINUS_DI&symbol=MSFT&interval=weekly&time_period=10&apikey=demo", "https://www.alphavantage.co/query?function=MINUS_DI&symbol=MSFT&interval=weekly&time_period=10&apikey=demo"]
+[MINUS_DM]
+function = "MINUS_DM"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=MINUS_DM&symbol=MSFT&interval=daily&time_period=10&apikey=demo", "https://www.alphavantage.co/query?function=MINUS_DM&symbol=MSFT&interval=daily&time_period=10&apikey=demo"]
+[MOM]
+function = "MOM"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=MOM&symbol=MSFT&interval=daily&time_period=10&series_type=close&apikey=demo", "https://www.alphavantage.co/query?function=MOM&symbol=MSFT&interval=daily&time_period=10&series_type=close&apikey=demo"]
+[NATR]
+function = "NATR"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=NATR&symbol=MSFT&interval=weekly&time_period=14&apikey=demo", "https://www.alphavantage.co/query?function=NATR&symbol=MSFT&interval=weekly&time_period=14&apikey=demo"]
+[OBV]
+function = "OBV"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=OBV&symbol=MSFT&interval=weekly&apikey=demo", "https://www.alphavantage.co/query?function=OBV&symbol=MSFT&interval=weekly&apikey=demo"]
+[PLUS_DI]
+function = "PLUS_DI"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=PLUS_DI&symbol=MSFT&interval=daily&time_period=10&apikey=demo", "https://www.alphavantage.co/query?function=PLUS_DI&symbol=MSFT&interval=daily&time_period=10&apikey=demo"]
+[PLUS_DM]
+function = "PLUS_DM"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=PLUS_DM&symbol=MSFT&interval=daily&time_period=10&apikey=demo", "https://www.alphavantage.co/query?function=PLUS_DM&symbol=MSFT&interval=daily&time_period=10&apikey=demo"]
+[PPO]
+function = "PPO"
+optional = ["fastperiod", "slowperiod", "matype", "datatype"]
+required = ["function", "symbol", "interval", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=PPO&symbol=MSFT&interval=daily&series_type=close&fastperiod=10&matype=1&apikey=demo", "https://www.alphavantage.co/query?function=PPO&symbol=MSFT&interval=daily&series_type=close&fastperiod=10&matype=1&apikey=demo"]
+[ROC]
+function = "ROC"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=ROC&symbol=MSFT&interval=weekly&time_period=10&series_type=close&apikey=demo", "https://www.alphavantage.co/query?function=ROC&symbol=MSFT&interval=weekly&time_period=10&series_type=close&apikey=demo"]
+[ROCR]
+function = "ROCR"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=ROCR&symbol=MSFT&interval=daily&time_period=10&series_type=close&apikey=demo", "https://www.alphavantage.co/query?function=ROCR&symbol=MSFT&interval=daily&time_period=10&series_type=close&apikey=demo"]
+[RSI]
+function = "RSI"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=RSI&symbol=MSFT&interval=weekly&time_period=10&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=RSI&symbol=MSFT&interval=weekly&time_period=10&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=RSI&symbol=USDEUR&interval=weekly&time_period=10&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=RSI&symbol=USDEUR&interval=weekly&time_period=10&series_type=open&apikey=demo"]
+[SAR]
+function = "SAR"
+optional = ["acceleration", "maximum", "datatype"]
+required = ["function", "symbol", "interval", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=SAR&symbol=MSFT&interval=weekly&acceleration=0.05&maximum=0.25&apikey=demo", "https://www.alphavantage.co/query?function=SAR&symbol=MSFT&interval=weekly&acceleration=0.05&maximum=0.25&apikey=demo"]
+[SMA]
+function = "SMA"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=SMA&symbol=MSFT&interval=weekly&time_period=10&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=SMA&symbol=MSFT&interval=weekly&time_period=10&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=SMA&symbol=USDEUR&interval=weekly&time_period=10&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=SMA&symbol=USDEUR&interval=weekly&time_period=10&series_type=open&apikey=demo"]
+[STOCH]
+function = "STOCH"
+optional = ["fastkperiod", "slowkperiod", "slowdperiod", "slowkmatype", "slowdmatype", "datatype"]
+required = ["function", "symbol", "interval", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=STOCH&symbol=MSFT&interval=daily&apikey=demo", "https://www.alphavantage.co/query?function=STOCH&symbol=MSFT&interval=daily&apikey=demo", "https://www.alphavantage.co/query?function=STOCH&symbol=USDEUR&interval=weekly&apikey=demo", "https://www.alphavantage.co/query?function=STOCH&symbol=USDEUR&interval=weekly&apikey=demo"]
+[STOCHF]
+function = "STOCHF"
+optional = ["fastkperiod", "fastdperiod", "fastdmatype", "datatype"]
+required = ["function", "symbol", "interval", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=STOCHF&symbol=MSFT&interval=daily&apikey=demo", "https://www.alphavantage.co/query?function=STOCHF&symbol=MSFT&interval=daily&apikey=demo"]
+[STOCHRSI]
+function = "STOCHRSI"
+optional = ["fastkperiod", "fastdperiod", "fastdmatype", "datatype"]
+required = ["function", "symbol", "interval", "time_period", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=STOCHRSI&symbol=MSFT&interval=daily&time_period=10&series_type=close&fastkperiod=6&fastdmatype=1&apikey=demo", "https://www.alphavantage.co/query?function=STOCHRSI&symbol=MSFT&interval=daily&time_period=10&series_type=close&fastkperiod=6&fastdmatype=1&apikey=demo"]
+[SYMBOL_SEARCH]
+function = "SYMBOL_SEARCH"
+optional = ["datatype"]
+required = ["function", "keywords", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=BA&apikey=demo", "https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=BA&apikey=demo", "https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=Micro&apikey=demo", "https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=Micro&apikey=demo", "https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=sony&apikey=demo", "https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=sony&apikey=demo", "https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=xiaomi&apikey=demo", "https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=xiaomi&apikey=demo", "https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=BA&apikey=demo&datatype=csv", "https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=BA&apikey=demo&datatype=csv"]
+[T3]
+function = "T3"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=T3&symbol=MSFT&interval=weekly&time_period=10&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=T3&symbol=MSFT&interval=weekly&time_period=10&series_type=open&apikey=demo"]
+[TEMA]
+function = "TEMA"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=TEMA&symbol=MSFT&interval=weekly&time_period=10&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=TEMA&symbol=MSFT&interval=weekly&time_period=10&series_type=open&apikey=demo"]
+[TRANGE]
+function = "TRANGE"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=TRANGE&symbol=MSFT&interval=daily&apikey=demo", "https://www.alphavantage.co/query?function=TRANGE&symbol=MSFT&interval=daily&apikey=demo"]
+[TRIMA]
+function = "TRIMA"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=TRIMA&symbol=MSFT&interval=weekly&time_period=10&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=TRIMA&symbol=MSFT&interval=weekly&time_period=10&series_type=open&apikey=demo"]
+[TRIX]
+function = "TRIX"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=TRIX&symbol=MSFT&interval=daily&time_period=10&series_type=close&apikey=demo", "https://www.alphavantage.co/query?function=TRIX&symbol=MSFT&interval=daily&time_period=10&series_type=close&apikey=demo"]
+[ULTOSC]
+function = "ULTOSC"
+optional = ["timeperiod1", "timeperiod2", "timeperiod3", "datatype"]
+required = ["function", "symbol", "interval", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=ULTOSC&symbol=MSFT&interval=daily&timeperiod1=8&apikey=demo", "https://www.alphavantage.co/query?function=ULTOSC&symbol=MSFT&interval=daily&timeperiod1=8&apikey=demo", "https://www.alphavantage.co/query?function=ULTOSC&symbol=MSFT&interval=daily&apikey=demo", "https://www.alphavantage.co/query?function=ULTOSC&symbol=MSFT&interval=weekly&apikey=demo"]
+[VWAP]
+function = "VWAP"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=VWAP&symbol=MSFT&interval=15min&apikey=demo", "https://www.alphavantage.co/query?function=VWAP&symbol=MSFT&interval=15min&apikey=demo"]
+[WILLR]
+function = "WILLR"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=WILLR&symbol=MSFT&interval=daily&time_period=10&apikey=demo", "https://www.alphavantage.co/query?function=WILLR&symbol=MSFT&interval=daily&time_period=10&apikey=demo"]
+[WMA]
+function = "WMA"
+optional = ["datatype"]
+required = ["function", "symbol", "interval", "time_period", "series_type", "apikey"]
+type = "Technical Indicators"
+urls = ["https://www.alphavantage.co/query?function=WMA&symbol=MSFT&interval=weekly&time_period=10&series_type=open&apikey=demo", "https://www.alphavantage.co/query?function=WMA&symbol=MSFT&interval=weekly&time_period=10&series_type=open&apikey=demo"]

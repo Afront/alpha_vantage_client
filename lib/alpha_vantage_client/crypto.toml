@@ -1,0 +1,24 @@
+[CURRENCY_EXCHANGE_RATE]
+function = "CURRENCY_EXCHANGE_RATE"
+optional = []
+required = ["function", "from_currency", "to_currency", "apikey"]
+type = "Others"
+urls = ["https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=BTC&to_currency=CNY&apikey=demo", "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=BTC&to_currency=CNY&apikey=demo", "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=JPY&apikey=demo", "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=JPY&apikey=demo"]
+[DIGITAL_CURRENCY_DAILY]
+function = "DIGITAL_CURRENCY_DAILY"
+optional = []
+required = ["function", "symbol", "market", "apikey"]
+type = "Cryptocurrencies"
+urls = ["https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol=BTC&market=CNY&apikey=demo", "https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol=BTC&market=CNY&apikey=demo", "https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol=BTC&market=CNY&apikey=demo&datatype=csv", "https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol=BTC&market=CNY&apikey=demo&datatype=csv"]
+[DIGITAL_CURRENCY_MONTHLY]
+function = "DIGITAL_CURRENCY_MONTHLY"
+optional = []
+required = ["function", "symbol", "market", "apikey"]
+type = "Cryptocurrencies"
+urls = ["https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_MONTHLY&symbol=BTC&market=CNY&apikey=demo", "https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_MONTHLY&symbol=BTC&market=CNY&apikey=demo", "https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_MONTHLY&symbol=BTC&market=CNY&apikey=demo&datatype=csv", "https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_MONTHLY&symbol=BTC&market=CNY&apikey=demo&datatype=csv"]
+[DIGITAL_CURRENCY_WEEKLY]
+function = "DIGITAL_CURRENCY_WEEKLY"
+optional = []
+required = ["function", "symbol", "market", "apikey"]
+type = "Cryptocurrencies"
+urls = ["https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_WEEKLY&symbol=BTC&market=CNY&apikey=demo", "https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_WEEKLY&symbol=BTC&market=CNY&apikey=demo", "https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_WEEKLY&symbol=BTC&market=CNY&apikey=demo&datatype=csv", "https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_WEEKLY&symbol=BTC&market=CNY&apikey=demo&datatype=csv"]
