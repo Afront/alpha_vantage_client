@@ -7,6 +7,8 @@ module API
   API_KEY = ENV['ALPHA_VANTAGE_API_KEY'].to_s
   #TODO: allow api key loading
 
+  #TODO: add functions_info for this module
+
   module_function
   #TODO: allow implicit loading 
 
