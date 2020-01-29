@@ -15,15 +15,23 @@ module API
     end
 
     def optional_parameter?(function, parameter)
-      parameters(function)['optional'].include? parameter
+      @info[function]['optional'].include? parameter
     end
 
     def required_parameter?(function, parameter)
-      parameters(function)['required'].include? parameter
+      @info[function]['required'].include? parameter
+    end
+
+    def parameter?(function, parameter)
+      parameters(function).include? parameter
     end
 
     def include?(function)
       !@info[function].nil?
+    end
+
+    def parameters(function)
+      @info[function]['required'] + @info[function]['optional']
     end
 
     def not_loaded
@@ -42,7 +50,7 @@ module API
       # rubocop:enable Style/RedundantBegin
     end
 
-    def parameters(function)
+    def info(function)
       @info[function]
     end
   end
@@ -84,7 +92,7 @@ module API
       # assumes all values are not nil
       # add raise ''... if hash contains nil as a value
       valid_string += "#{parameter}=#{value}"
-      if !@functions_info.parameters(hash[:function]).include?(parameter)
+      if @functions_info.parameter?(hash[:function], parameter)
         arr_err << "#{parameter} should not be set for #{hash[:function]}"
       elsif @functions_info.required_parameter?(hash[:function], parameter)
         arr_err << "#{parameter} is not set"
