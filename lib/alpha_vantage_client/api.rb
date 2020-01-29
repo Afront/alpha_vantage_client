@@ -73,7 +73,7 @@ module API
 
   def print_json json, depth=0
     json.each do |key, value|
-      if valu === Hash
+      if value === Hash
         puts "#{key}:"
         print_json value, depth+1
       else 
