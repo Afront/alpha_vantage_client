@@ -1,10 +1,6 @@
 require 'pp'
 
 describe API do
-  before do
-    #TODO: Remove line once Lazy module can be loaded implicitly
-    ::API::load 'lazy'
-  end
 =begin 
   it must 'check if ' do
 

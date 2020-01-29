@@ -3,9 +3,7 @@ require 'json'
 require 'toml-rb'
 
 module API
-  raise IOError, 'ALPHA_VANTAGE_API_KEY is not set as an environmental variable. If you want to load the API key youself, load API_KEY first' if ENV['ALPHA_VANTAGE_API_KEY'].nil?
   API_KEY = ENV['ALPHA_VANTAGE_API_KEY'].to_s
-  #TODO: allow api key loading
 
   @@functions_info = {}
 
@@ -89,7 +87,7 @@ module API
     end
 
     raise NameError, "Invalid function: #{kwargs[:function]}" unless @@functions_info[kwargs[:function]]
-    kwargs[:apikey] ||= API_KEY
+    raise ArgumentError, "The API key is not set! Please set the API key either as an argument for this method or as an environmental variable (ALPHA_VANTAGE_API_KEY)"  unless kwargs[:apikey] ||= API_KEY
 
     get_json(kwargs)
   end
