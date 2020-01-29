@@ -4,6 +4,12 @@
 require 'pp'
 
 describe API do
+  before do
+    ::API.load 'fx'
+    ::API.load 'crypto'
+    ::API.load 'sector'
+  end
+
   describe 'when forex functions are used' do
     describe 'when "CURRENCY_EXCHANGE_RATE" function is used' do
       before do
@@ -77,6 +83,7 @@ describe API do
       end
     end
   end
+
   describe 'when sector functions are used' do
     describe 'when "SECTOR" function is used' do
       before do
