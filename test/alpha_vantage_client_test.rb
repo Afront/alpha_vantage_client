@@ -1,18 +1,10 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
+require 'api_spec_demo'
 
 describe AlphaVantageClient do
   it 'must have a version number' do
     refute_nil ::AlphaVantageClient::VERSION
   end
 end
-
-
-require 'api_spec_demo'
-
-=begin
-if ENV['ALPHA_VANTAGE_API_KEY'] == 'demo'
-  require 'api_spec_demo'
-else
-  require 'api_spec'  
-end
-=end

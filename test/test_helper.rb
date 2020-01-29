@@ -1,4 +1,5 @@
-$LOAD_PATH.unshift File.expand_path("../lib", __dir__)
-require "alpha_vantage_client"
+# frozen_string_literal: true
 
-require "minitest/autorun"
+$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
+require 'alpha_vantage_client'
+require 'minitest/autorun'
