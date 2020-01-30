@@ -35,7 +35,7 @@ module API
     end
 
     def not_loaded
-      @info
+      @info == {}
     end
 
     def load(type)
