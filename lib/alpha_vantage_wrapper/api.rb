@@ -6,12 +6,11 @@ require 'toml-rb'
 
 # (TODO:) Add documentation here
 module API
-  API_KEY = ENV['ALPHA_VANTAGE_API_KEY'].to_s
-
   # A class for functions_info; originally a struct, but changed it to class
   class FunctionsInfo
     def initialize
       @info = {}
+      @api_key = ENV['ALPHA_VANTAGE_API_KEY'].to_s
     end
 
     def optional_parameter?(function, parameter)
@@ -48,6 +47,16 @@ module API
                           '"sector", "stocks", and "tech_indicators"'].join(' ')
       end
       # rubocop:enable Style/RedundantBegin
+    end
+
+    def load_key(key)
+      unset_key_warning = <<~WARNING
+        The API key is not set!
+        Please load the API key via the load function
+        Or as an argument for this method
+        Or under the environemental variable, 'ALPHA_VANTAGE_API_KEY'
+      WARNING
+      raise ArgumentError, unset_key_warning unless @api_key ||= key
     end
 
     def info(function)
@@ -90,7 +99,7 @@ module API
   def generate_url(hash, arr_err = [], valid_string = '')
     hash.each_pair do |parameter, value|
       # assumes all values are not nil
-      # add raise ''... if hash contains nil as a value
+      # add `raise ''... if hash contains nil as a value` if needed
       valid_string += "#{parameter}=#{value}"
       if @functions_info.parameter?(hash[:function], parameter)
         arr_err << "#{parameter} should not be set for #{hash[:function]}"
@@ -105,6 +114,8 @@ module API
   end
 
   def get_json(call_hash)
+    @functions_info.load_key call_hash[:apikey]
+
     json_result = Faraday.get generate_url(call_hash)
     JSON.parse json_result.body
   end
@@ -120,21 +131,17 @@ module API
     end
   end
 
-  def get_directly(**kwargs)
-    function = kwargs[:function]
+  def get_directly(**input_function_parameters)
+    function = input_function_parameters[:function]
     invalid_function_w = "Invalid function: #{function}"
-    unset_key_warning = "The API key is not set! Please set the API key \
-either as an argument for this method or \
-as an environmental variable (ALPHA_VANTAGE_API_KEY)"
 
     @functions_info.load 'all' if @functions_info.not_loaded
     raise NameError, invalid_function_w unless @functions_info.include? function
-    raise ArgumentError, unset_key_warning unless kwargs[:apikey] ||= API_KEY
 
-    get_json(kwargs)
+    get_json(input_function_parameters)
   end
 
-  def print_directly(**kwargs)
-    print_json get_json(kwargs)
+  def print_directly(**input_function_parameters)
+    print_json get_json(input_function_parameters)
   end
 end
