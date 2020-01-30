@@ -13,7 +13,11 @@ describe API do
   describe 'when forex functions are used' do
     describe 'when "CURRENCY_EXCHANGE_RATE" function is used' do
       before do
-        @supposed_hash_object = ::API.get_directly(function: 'CURRENCY_EXCHANGE_RATE', from_currency: 'USD', to_currency: 'JPY')
+        input_hash = { function: 'CURRENCY_EXCHANGE_RATE',
+                       from_currency: 'USD',
+                       to_currency: 'JPY' }
+
+        @supposed_hash_object = ::API.get_directly input_hash
       end
 
       it 'must return a Hash object' do
@@ -23,7 +27,10 @@ describe API do
 
     describe 'when the "FX_INTRADAY" function is used' do
       before do
-        @supposed_hash_object = ::API.get_directly(function: 'FX_INTRADAY', from_symbol: 'EUR', to_symbol: 'USD', interval: '5min')
+        @supposed_hash_object = ::API.get_directly(function: 'FX_INTRADAY',
+                                                   from_symbol: 'EUR',
+                                                   to_symbol: 'USD',
+                                                   interval: '5min')
       end
 
       it 'must return a Hash object' do
@@ -33,7 +40,10 @@ describe API do
 
     describe 'when the "FX_DAILY" function is used' do
       before do
-        @supposed_hash_object = ::API.get_directly(function: 'FX_DAILY', from_symbol: 'EUR', to_symbol: 'USD', outputsize: 'full')
+        @supposed_hash_object = ::API.get_directly(function: 'FX_DAILY',
+                                                   from_symbol: 'EUR',
+                                                   to_symbol: 'USD',
+                                                   outputsize: 'full')
       end
 
       it 'must return a Hash object' do
@@ -45,7 +55,11 @@ describe API do
   describe 'when crypto functions are used' do
     describe 'when "CURRENCY_EXCHANGE_RATE" function is used' do
       before do
-        @supposed_hash_object = ::API.get_directly(function: 'CURRENCY_EXCHANGE_RATE', from_currency: 'BTC', to_currency: 'CNY')
+        input_hash = { function: 'CURRENCY_EXCHANGE_RATE',
+                       from_currency: 'BTC',
+                       to_currency: 'JPY' }
+
+        @supposed_hash_object = ::API.get_directly(input_hash)
       end
 
       it 'must return a Hash object' do
@@ -55,7 +69,10 @@ describe API do
 
     describe 'when the "DIGITAL_CURRENCY_DAILY" function is used' do
       before do
-        @supposed_hash_object = ::API.get_directly(function: 'DIGITAL_CURRENCY_DAILY', symbol: 'BTC', market: 'CNY')
+        input_hash = { function: 'DIGITAL_CURRENCY_DAILY',
+                       symbol: 'BTC',
+                       market: 'CNY' }
+        @supposed_hash_object = ::API.get_directly(input_hash)
       end
 
       it 'must return a Hash object' do
@@ -65,7 +82,10 @@ describe API do
 
     describe 'when the "DIGITAL_CURRENCY_WEEKLY" function is used' do
       before do
-        @supposed_hash_object = ::API.get_directly(function: 'DIGITAL_CURRENCY_WEEKLY', symbol: 'BTC', market: 'CNY')
+        input_hash = { function: 'DIGITAL_CURRENCY_WEEKLY',
+                       symbol: 'BTC',
+                       market: 'CNY' }
+        @supposed_hash_object = ::API.get_directly(input_hash)
       end
 
       it 'must return a Hash object' do
@@ -75,7 +95,10 @@ describe API do
 
     describe 'when the "DIGITAL_CURRENCY_MONTHLY" function is used' do
       before do
-        @supposed_hash_object = ::API.get_directly(function: 'DIGITAL_CURRENCY_MONTHLY', symbol: 'BTC', market: 'CNY')
+        input_hash = { function: 'DIGITAL_CURRENCY_MONTHLY',
+                       symbol: 'BTC',
+                       market: 'CNY' }
+        @supposed_hash_object = ::API.get_directly(input_hash)
       end
 
       it 'must return a Hash object' do

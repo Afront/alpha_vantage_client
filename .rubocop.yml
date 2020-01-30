@@ -4,8 +4,5 @@ Style/Encoding:
 Layout/EndOfLine:
   EnforcedStyle: lf
 
-Layout/LineLength:
-  Max: 150
-
 Metrics/BlockLength:
   Enabled: false
