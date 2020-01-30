@@ -41,7 +41,7 @@ module API
     def load(type)
       # rubocop:disable Style/RedundantBegin
       begin
-        @info.merge! TomlRB.load_file("lib/alpha_vantage_client/#{type}.toml")
+        @info.merge! TomlRB.load_file("lib/alpha_vantage_wrapper/#{type}.toml")
       rescue LoadError
         raise NameError, ["This function type, #{type}, does not exist.",
                           'The only valid types are "all", "crypto", "forex",',
