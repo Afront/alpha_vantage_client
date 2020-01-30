@@ -40,6 +40,7 @@ module API
     def load(type)
       # rubocop:disable Style/RedundantBegin
       begin
+        type = 'fx' if type == 'forex'
         @info.merge! TomlRB.load_file("lib/alpha_vantage_wrapper/#{type}.toml")
       rescue LoadError
         raise NameError, ["This function type, #{type}, does not exist.",
