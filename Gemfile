@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in alpha_vantage_client.gemspec
+# Specify your gem's dependencies in alpha_vantage_wrapper.gemspec
 gemspec
 
 gem 'faraday', '~> 1.0'

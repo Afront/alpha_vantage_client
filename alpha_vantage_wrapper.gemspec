@@ -3,27 +3,27 @@
 # rubocop:disable all
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require_relative 'lib/alpha_vantage_client/version'
+require_relative 'lib/alpha_vantage_wrapper/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'alpha_vantage_client'
-  spec.version       = AlphaVantageClient::VERSION
+  spec.name          = 'alpha_vantage_wrapper'
+  spec.version       = AlphaVantageWrapper::VERSION
   spec.authors       = ['Afront']
   spec.email         = ['3943720+Afront@users.noreply.github.com']
 
   spec.summary       = %q{An alpha_vantage client.}
   spec.description   = %q{An alpha_vantage client that uses the Alpha Vantage API}
-  spec.homepage      = 'https://coding-everyday.works/gems/alpha_vantage_client'
+  spec.homepage      = 'https://coding-everyday.works/gems/alpha_vantage_wrapper'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
 
   spec.metadata = {
-    'bug_tracker_uri'   => 'https://github.com/Afront/alpha_vantage_client/issues',
-    'changelog_uri'     => 'https://github.com/Afront/alpha_vantage_client/CHANGELOG.md',
-#   'documentation_uri' => 'https://coding-everyday.works/gems/alpha_vantage_client/0.0.1',
+    'bug_tracker_uri'   => 'https://github.com/Afront/alpha_vantage_wrapper/issues',
+    'changelog_uri'     => 'https://github.com/Afront/alpha_vantage_wrapper/CHANGELOG.md',
+#   'documentation_uri' => 'https://coding-everyday.works/gems/alpha_vantage_wrapper/0.0.1',
     'homepage_uri'      => spec.homepage,
-#   'mailing_list_uri'  => 'https://coding-everyday.works/alpha_vantage_client',
-    'source_code_uri'   => 'https://github.com/Afront/alpha_vantage_client',
-    'wiki_uri'          => 'https://github.com/Afront/alpha_vantage_client/wiki'
+#   'mailing_list_uri'  => 'https://coding-everyday.works/alpha_vantage_wrapper',
+    'source_code_uri'   => 'https://github.com/Afront/alpha_vantage_wrapper',
+    'wiki_uri'          => 'https://github.com/Afront/alpha_vantage_wrapper/wiki'
   }
 
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
@@ -31,8 +31,8 @@ Gem::Specification.new do |spec|
   end
 
 # spec.bindir        = 'bin'
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) } + ['alpha_vantage_client']
-# spec.executables   = ['alpha_vantage_client']
+  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) } + ['alpha_vantage_wrapper']
+# spec.executables   = ['alpha_vantage_wrapper']
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler', '~> 2.1'

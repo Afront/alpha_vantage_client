@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    alpha_vantage_client (0.1.0)
+    alpha_vantage_wrapper (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -20,7 +20,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  alpha_vantage_client!
+  alpha_vantage_wrapper!
   bundler (~> 2.1)
   faraday (~> 1.0)
   json (~> 2.3)
