@@ -7,9 +7,8 @@ require 'toml-rb'
 #
 # This module contains the methods to access the api.
 # @author [Afront]
-# 
+#
 module API
-
   # A class for functions_info; originally a struct, but changed it to class
   class FunctionsInfo
     def initialize
@@ -42,16 +41,12 @@ module API
     end
 
     def load(type)
-      # rubocop:disable Style/RedundantBegin
-      begin
-        type = 'fx' if type == 'forex'
-        @info.merge! TomlRB.load_file("lib/alpha_vantage_wrapper/#{type}.toml")
-      rescue LoadError
-        raise NameError, ["This function type, #{type}, does not exist.",
-                          'The only valid types are "all", "crypto", "forex",',
-                          '"sector", "stocks", and "tech_indicators"'].join(' ')
-      end
-      # rubocop:enable Style/RedundantBegin
+      type = 'fx' if type == 'forex'
+      @info.merge! TomlRB.load_file("lib/alpha_vantage_wrapper/#{type}.toml")
+    rescue LoadError
+      raise NameError, ["This function type, #{type}, does not exist.",
+                        'The only valid types are "all", "crypto", "forex",',
+                        '"sector", "stocks", and "tech_indicators"'].join(' ')
     end
 
     def load_key(key)
@@ -114,9 +109,7 @@ module API
 
   # This module handles errors concerning the API
   module ErrorHandler
-    def missing_a
-      
-    end
+    def missing_a; end
   end
 
   # This module contains specific methods for cryptocurrencies functions
@@ -125,31 +118,23 @@ module API
 
   # This module contains specific methods for forex functions
   module Forex
-
     def currency_exchange_rate(from_currency:, to_currency:, apikey: false)
-    	query_string{'from_currency' => from_currency,
-    	 'to_currency'   => to_currency,
-    	 'apikey' 			 => apikey}.map do |parameter, argument|
-    	 		"#{parameter}=#{argument}"
-    	 }.join('&')
+      query_string = { 'from_currency' => from_currency,
+                       'to_currency' => to_currency,
+                       'apikey' => apikey }.map do |parameter, argument|
+        "#{parameter}=#{argument}"
+      end.join('&')
 
-	    get_json "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&#{query_string}"
+      get_json "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&#{query_string}"
     end
 
-    def intraday(from_symbol:, to_symbol:, interval, outputsize: false, datatype: false, apikey: false)
-      
-    end
+    def intraday(from_symbol:, to_symbol:, interval:, outputsize: false, datatype: false, apikey: false); end
 
-
-    def daily(from_symbol: false, to_symbol: false, apikey: false)
-      
-    end
-
+    def daily(from_symbol: false, to_symbol: false, apikey: false); end
   end
 
   # This module contains a method for the sector function
   module Sector
-
   end
 
   # This module contains specific methods for stocks functions
@@ -162,7 +147,7 @@ module API
 
   def get_json(url)
     json_result = Faraday.get url
-    JSON.parse json_result.body  
+    JSON.parse json_result.body
   end
 
   # Gets the sector information using the API
@@ -174,20 +159,15 @@ module API
     get_json "https://www.alphavantage.co/query?SECTOR&apikey=#{apikey}"
   end
 
- 
-	# Get stock information using the api
-	# @param **stock_parameters [Hash] Parameters for the desired function
+  # Get stock information using the api
+  # @param **stock_parameters [Hash] Parameters for the desired function
   # @return [Hash] The hash received from the API response
-  def get_stocks(**stock_parameters)
+  def get_stocks(**stock_parameters); end
 
-  end
-
-	# Get technical indicator information using the api
-	# @param **tech_indicator_parameters [Hash] Parameters for the function
+  # Get technical indicator information using the api
+  # @param **tech_indicator_parameters [Hash] Parameters for the function
   # @return [Hash] The hash received from the API response
-  def get_tech_indicators(**tech_indicator_parameters)
-    
-  end
+  def get_tech_indicators(**tech_indicator_parameters); end
 
   def get_directly(**input_function_parameters)
     function = input_function_parameters[:function]
