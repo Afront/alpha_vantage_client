@@ -8,5 +8,5 @@ gemspec
 gem 'faraday', '~> 1.0'
 gem 'json', '~> 2.3'
 gem 'minitest', '~> 5.0'
-gem 'rake', '~> 12.0'
+gem 'rake', '~> 12.3'
 gem 'toml-rb', '~> 2.0', '>= 2.0.1'
