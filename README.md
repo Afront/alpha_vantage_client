@@ -1,5 +1,9 @@
 # Alpha Vantage Wrapper
+[![Inline docs](http://inch-ci.org/github/Afront/alpha_vantage_wrapper.svg?branch=master)](http://inch-ci.org/github/Afront/alpha_vantage_wrapper)
 [![Known Vulnerabilities](https://snyk.io/test/github/Afront/alpha_vantage_wrapper/badge.svg?targetFile=Gemfile.lock)](https://snyk.io/test/github/Afront/alpha_vantage_wrapper?targetFile=Gemfile.lock)
+[![Maintainability](https://api.codeclimate.com/v1/badges/4f5e1ac64e65b425871b/maintainability)](https://codeclimate.com/github/Afront/alpha_vantage_wrapper/maintainability)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE-APACHE)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE-MIT)
 
 
 An alpha vantage wrapper for Ruby (part of the [Code Everyday 2020](https://github.com/Afront/Code-Everyday-2020 "GitHub Repo") project). An [alpha vantage client](https://github.com/Afront/alpha_vantage_client "Client repo") is in the works.
