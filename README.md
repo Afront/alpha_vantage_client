@@ -1,4 +1,6 @@
 # Alpha Vantage Wrapper
+[![Known Vulnerabilities](https://snyk.io/test/github/Afront/alpha_vantage_wrapper/badge.svg?targetFile=Gemfile.lock)](https://snyk.io/test/github/Afront/alpha_vantage_wrapper?targetFile=Gemfile.lock)
+
 
 An alpha vantage wrapper for Ruby (part of the [Code Everyday 2020](https://github.com/Afront/Code-Everyday-2020 "GitHub Repo") project). An [alpha vantage client](https://github.com/Afront/alpha_vantage_client "Client repo") is in the works.
 
